@@ -2,6 +2,7 @@ package dev.stoyan.ollama.chat;
 
 import dev.stoyan.ollama.person.PersonService;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,7 +12,7 @@ public class ChatService {
     private final PersonService personService;
 
     public ChatService(final ChatClient.Builder builder, final PersonService personService) {
-        this.chatClient = builder.build();
+        this.chatClient = builder.defaultAdvisors(new SimpleLoggerAdvisor()).build();
         this.personService = personService;
     }
 
