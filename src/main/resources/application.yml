@@ -6,6 +6,11 @@ spring:
       chat:
 #        model: deepseek-r1:7b
         model: llama3.1
+#    openai:
+#      api-key: ${OPENAI_API_KEY}
+#      chat:
+#        options:
+#          model: gpt-4o-mini
 
 logging:
   level:
