@@ -6,6 +6,8 @@ spring:
       chat:
 #        model: deepseek-r1:7b
         model: llama3.1
+#        model: qwq
+#        model: llama3.3
 #    openai:
 #      api-key: ${OPENAI_API_KEY}
 #      chat:
