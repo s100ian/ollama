@@ -5,9 +5,10 @@ spring:
     ollama:
       chat:
 #        model: deepseek-r1:7b
-        model: llama3.1
+#        model: llama3.1
 #        model: qwq
 #        model: llama3.3
+        model: llama3.2
 #    openai:
 #      api-key: ${OPENAI_API_KEY}
 #      chat:
