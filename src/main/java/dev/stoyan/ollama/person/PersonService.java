@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 public class PersonService {
 
     private static final Collection<PersonDTO> PERSONS = Set.of(
-        new PersonDTO("Stoyan", 40, Set.of("Java", "Spring Boot", "meat balls")),
+        new PersonDTO("Stoyan", 40, Set.of("Java", "Spring Boot", "Meatballs")),
         new PersonDTO("Slavomir", 30, Set.of("AI", "machine learning")),
         new PersonDTO("Hristo", 35, Set.of("Python", "Django", "Typescript")),
         new PersonDTO("Valentin", 25, Set.of("Typescript", "Angular", "React")));
