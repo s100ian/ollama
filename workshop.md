@@ -1,4 +1,4 @@
-# Spring Boot AI and Ollama Workshop
+# Spring AI and Ollama Workshop
 
 ## Introduction
 
