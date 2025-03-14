@@ -7,7 +7,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ChatService {
-    private static final String SYSTEM_MESSAGE = "If you cannot give an answer or you don't know the answer, type 'I don't know'. Use only provided tool methods and do not hallucinate new ones.";
+
+    private static final String SYSTEM_MESSAGE = """
+        You are a helpful assistant, who answers questions about people.
+        You are free to call provided tool functions to obtain requested data.
+        If you cannot give an answer or you don't know the answer, do not try to hallucinate, just respond 'I don't know'.
+        Use only provided tool methods and do not imagine new ones.
+        """;
     private final ChatClient chatClient;
     private final PersonService personService;
 
@@ -17,6 +23,7 @@ public class ChatService {
     }
 
     public String chat(final String message) {
-        return chatClient.prompt().system(SYSTEM_MESSAGE).user(message).tools(personService).call().content();
+        return chatClient.prompt().system(SYSTEM_MESSAGE).user(message).tools(personService).call()
+            .content();
     }
 }
